@@ -1,0 +1,47 @@
+body {
+  background-color: #ccddee;
+  margin-bottom: 100px;
+  
+}
+
+header {
+  background-color: skyblue;
+}
+footer {
+  background-color: SkyBlue;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 50px;
+  letter-spacing: 20px;
+  line-height: 200px;
+}
+h3{
+  text-align: center;
+}
+img{
+  border-radius: 50%;
+}
+a:hover{
+  color: red;
+}
+.footer_paragrafo{
+  color: darkred;
+  text-align: center;
+}
+.alexandre_nome{
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin-left: 10px;
+}
+.nome_imagem{
+  display:flex; 
+  justify-content: center;
+}
