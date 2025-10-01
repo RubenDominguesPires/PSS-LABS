@@ -1,0 +1,4 @@
+ PMA_token |s:32:"233a23317b3c607b416a4659476a5a4d"; HMAC_secret |s:16:"*_6;H{V?&_"TwM9x";browser_access_time|a:1:{s:7:"default";i:1759351775;}Import_message|a:1:{s:7:"message";s:421:"<div class="alert alert-danger" role="alert"><h1>Erro</h1><p>
+    <strong>Mensagens do MySQL : </strong><a href="./url.php?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.7%2Fen%2Fserver-error-reference.html" target="mysql_doc"><img src="themes/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</p>
+<code>Não é possível realizar a ligação: definições inválidas.</code><br></div>";}errors|a:0:{}
