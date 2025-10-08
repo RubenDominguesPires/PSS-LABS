@@ -4,7 +4,12 @@ if (!isset($_SESSION['username'])) {
   header("refresh:2;url=index.php");
   die("Acesso Restrito");
 }
+
+$valor_temperatura = file_get_contents("C:/Users/ruben/Documents/GitHub/PSS-LABS/LAB_#04/API/files/temperatura/valor.txt");
+$hora_temperatura  = file_get_contents("C:/Users/ruben/Documents/GitHub/PSS-LABS/LAB_#04/API/files/temperatura/hora.txt");
+$nome_sensor       = file_get_contents("C:/Users/ruben/Documents/GitHub/PSS-LABS/LAB_#04/API/files/temperatura/nome.txt");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,13 +67,13 @@ if (!isset($_SESSION['username'])) {
     <div class="row">
       <div class="col-sm-4">
         <div class="card-header text-center sensor">
-          <h4>Temperatura: 40º</h4>
+          <h4>Temperatura: <?= $valor_temperatura ?> °C</h4>
           <img
             src="images/temperature-high.png"
             alt=""
             class="card-footer text-center" />
           <p class="card-footer text-center">
-            <strong>Atualização:</strong> 2024/03/10 14:31 -
+            <strong>Atualização:</strong> <?= $hora_temperatura ?> -
             <a href="#">Histórico</a>
           </p>
         </div>
