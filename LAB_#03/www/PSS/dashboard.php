@@ -1,0 +1,161 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+  header("refresh:2;url=index.php");
+  die("Acesso Restrito");
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plataforma IoT</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+  <!-- ------------------------------------------NAVBAR------------------------------------------- -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Dashboard EI-TI</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Histórico</a>
+          </li>
+        </ul>
+      </div>
+      <form class="d-flex" role="search" action="logout.php">
+        <button class="btn btn-outline-success" type="submit">Logout</button>
+      </form>
+    </div>
+  </nav>
+  <div class="container d-flex justify-content-around align-items-center">
+    <div id="title-header">
+      <h1>Servidor IoT</h1>
+      <h6>Alexandre Lopes</h6>
+    </div>
+    <img src="images/estg.png" alt="estg" style="width: 300px" />
+  </div>
+  <!-- ------------------------------------------CARTOES------------------------------------------- -->
+  <div class="container mb-6">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card-header text-center sensor">
+          <h4>Temperatura: 40º</h4>
+          <img
+            src="images/temperature-high.png"
+            alt=""
+            class="card-footer text-center" />
+          <p class="card-footer text-center">
+            <strong>Atualização:</strong> 2024/03/10 14:31 -
+            <a href="#">Histórico</a>
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card-header text-center sensor">
+          <h4>Humidade: 70º</h4>
+          <img
+            src="images/humidity-high.png"
+            alt=""
+            class="card-footer text-center" />
+          <p class="card-footer text-center">
+            <strong>Atualização:</strong> 2024/03/10 14:31 -
+            <a href="#">Histórico</a>
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card-header text-center atuador">
+          <h4>Led Arduino: Ligado</h4>
+          <img
+            src="images/light-on.png"
+            alt=""
+            class="card-footer text-center" />
+          <p class="card-footer text-center">
+            <strong>Atualização:</strong> 2024/03/10 14:31 -
+            <a href="#">Histórico</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ------------------------------------------TABELA------------------------------------------- -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header"><strong>Tabela de Sensores</strong></div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Tipo de Dispositivo IoT</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Data de Atualização</th>
+                    <th scope="col">Estado Alertas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Temperatura</td>
+                    <td>40º</td>
+                    <td>2024/03/10 14:32</td>
+                    <td>
+                      <span class="badge rounded-pill text-bg-danger">Elevada</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Humidade</td>
+                    <td>70%</td>
+                    <td>2024/03/10 14:32</td>
+                    <td>
+                      <span class="badge rounded-pill text-bg-primary">Normal</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Led Arduino</td>
+                    <td>Ativo</td>
+                    <td>2024/03/10 14:32</td>
+                    <td>
+                      <span class="badge rounded-pill text-bg-success">Ativo</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

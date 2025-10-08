@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 
@@ -47,13 +50,35 @@
 
         <!-- PHP: display submitted values -->
         <?php
-        if (isset($_POST['username'])) {
-          echo "<br>Submitted username: " . $_POST['username'] . "<br>";
-        }
-        if (isset($_POST['password'])) {
-          echo "Submitted password: " . $_POST['password'] . "<br>";
+        // c) Definir o utilizador válido
+        $username = "pires_admin";
+
+        // Criar a hash da password (executar apenas uma vez, depois apagar o echo)
+        // echo password_hash("admin123", PASSWORD_DEFAULT);
+
+        // Definir a variável com a hash copiada
+        $password_hash = '$2y$10$nXc3GqY4J.CF9GDErzglHOtNMMLb2cYEnz3afrJ6.3XO9UHP6Y6H6'; // substitua pelo valor real
+
+        // Processar submissão do formulário
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+          $submitted_user = $_POST['username'] ?? '';
+          $submitted_pass = $_POST['password'] ?? '';
+
+          // Verificar credenciais
+          if ($submitted_user === $username && password_verify($submitted_pass, $password_hash)) {
+            // Guardar informação na sessão
+            $_SESSION['logged_in'] = true;
+            $_SESSION['username'] = $username;
+
+            // Redirecionar para dashboard
+           header( "refresh:0;url=dashboard.php" ); 
+            exit();
+          } else {
+            echo "<div class='alert alert-danger'>Username ou password inválidos!</div>";
+          }
         }
         ?>
+
       </form>
     </div>
   </div>

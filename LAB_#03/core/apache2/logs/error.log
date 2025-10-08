@@ -3,3 +3,10 @@
 [Wed Oct 01 21:49:04.904301 2025] [core:notice] [pid 9452:tid 480] AH00094: Command line: 'C:\\Users\\ruben\\Documents\\GitHub\\PSS-LABS\\LAB_#03\\core\\apache2\\bin\\httpd_z.exe -d C:/Users/ruben/Documents/GitHub/PSS-LABS/LAB_#03/core/apache2 -f C:\\Users\\ruben\\Documents\\GitHub\\PSS-LABS\\LAB_#03\\core\\apache2\\conf\\httpd.conf -d C:\\Users\\ruben\\Documents\\GitHub\\PSS-LABS\\LAB_#03\\core\\apache2'
 [Wed Oct 01 21:49:04.909795 2025] [mpm_winnt:notice] [pid 9452:tid 480] AH00418: Parent: Created child process 15952
 [Wed Oct 01 21:49:05.410265 2025] [mpm_winnt:notice] [pid 15952:tid 496] AH00354: Child: Starting 150 worker threads.
+[Wed Oct 08 14:05:51.003804 2025] [core:warn] [pid 3740:tid 452] AH00098: pid file C:/Users/ruben/Documents/GitHub/PSS-LABS/LAB_#03/core/apache2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Oct 08 14:05:51.114762 2025] [mpm_winnt:notice] [pid 3740:tid 452] AH00455: Apache/2.4.58 (Win64) PHP/8.3.0 configured -- resuming normal operations
+[Wed Oct 08 14:05:51.114762 2025] [mpm_winnt:notice] [pid 3740:tid 452] AH00456: Apache Lounge VS17 Server built: Oct 18 2023 13:03:18
+[Wed Oct 08 14:05:51.114762 2025] [core:notice] [pid 3740:tid 452] AH00094: Command line: 'C:\\Users\\ruben\\Documents\\GitHub\\PSS-LABS\\LAB_#03\\core\\apache2\\bin\\httpd_z.exe -d C:/Users/ruben/Documents/GitHub/PSS-LABS/LAB_#03/core/apache2 -f C:\\Users\\ruben\\Documents\\GitHub\\PSS-LABS\\LAB_#03\\core\\apache2\\conf\\httpd.conf -d C:\\Users\\ruben\\Documents\\GitHub\\PSS-LABS\\LAB_#03\\core\\apache2'
+[Wed Oct 08 14:05:51.114762 2025] [mpm_winnt:notice] [pid 3740:tid 452] AH00418: Parent: Created child process 21852
+[Wed Oct 08 14:05:51.511575 2025] [mpm_winnt:notice] [pid 21852:tid 452] AH00354: Child: Starting 150 worker threads.
+[Wed Oct 08 14:34:18.727868 2025] [php:warn] [pid 21852:tid 1836] [client ::1:62737] PHP Warning:  Undefined variable $nbpsp in C:\\Users\\ruben\\Documents\\GitHub\\PSS-LABS\\LAB_#03\\www\\PSS\\index.php on line 66, referer: http://localhost/PSS/index.php
